@@ -5,15 +5,21 @@ var bodyParser = require("body-parser")
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
 const cors = require("cors");
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
 app.use(cors());
 var mongoose = require('mongoose');
-var dbUrl = 'mongodb+srv://Dancairo:dan19091993@cluster0.ahsnl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+var dbUrl = 'mongodb+srv://Dancairo:@cluster0.ahsnl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 mongoose.connect(dbUrl , (err) => { 
     console.log("mongodb connected",err);
  })
 
 var Message = mongoose.model("Message",{ name : String, message : String})
+
+app.get('/', (req, res) => {
+    res.render('index')
+})
 
 app.get('/messages', (req, res) => {
     Message.find({},(err, messages)=> {
