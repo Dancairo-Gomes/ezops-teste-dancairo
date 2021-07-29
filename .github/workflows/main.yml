@@ -46,7 +46,7 @@ jobs:
         with:
           host: "ec2-3-80-40-175.compute-1.amazonaws.com"
           username: "ubuntu"
-          key: ${{ secrets.EC2_SSH_KEY }
+          key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.PORT }}
           script: |
            whoami
