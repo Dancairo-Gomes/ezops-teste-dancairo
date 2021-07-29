@@ -49,6 +49,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: ${{ secrets.PORT }}
           script: |
-           ls
+           cd ezops-teste-dancairo
+           sudo docker rm -f chat-app
+           docker run -d --name=chat-app -p 3000:3000 --restart=always dancairo/chat-app:v1
 
   
