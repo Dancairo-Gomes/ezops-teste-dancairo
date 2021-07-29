@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./
-          file: ./Dockerfile
+          file: ./ezops-teste-dancairo/Dockerfile
           push: true
           tags: dancairo/chat-app:v1
     
