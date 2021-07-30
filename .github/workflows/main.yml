@@ -6,7 +6,7 @@ on:
       - 'main'
 
 jobs:
-  docker:
+  continuous-integration:
     runs-on: ubuntu-latest
     steps:
       -
@@ -35,7 +35,7 @@ jobs:
     
   continuous-deployment:
     runs-on: ubuntu-latest
-    needs: [docker]
+    needs: [continuous-integration]
     steps:
      # Step 1
       - name: Configure AWS credentials
