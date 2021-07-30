@@ -37,10 +37,37 @@ $(() => {
         })
       getMessages()
     })
+    
 function addMessages(message){
    $("#messages").append(`
       <h4> ${message.name} </h4>
       <p>  ${message.message} </p>`)
+      
+      if (message.message == 'oi'){
+         sendMessage({
+            name: 'Amigo 2',
+            message: 'Olá tudo bem?'
+          })
+      }
+      if (message.message == 'estou bem e voce?' && message.name == 'Amigo'){
+         sendMessage({
+            name: 'Amigo 2',
+            message: 'eu também estou'
+          })
+      }
+      if (message.message == 'Podemos marcar nossa reunião?' && message.name == 'Amigo'){
+         sendMessage({
+            name: 'Amigo 2',
+            message: 'Sim, pode ser hoje as 17 horas?'
+          })
+      }
+
+      if (message.message == 'Pode sim, perfeito' && message.name == 'Amigo'){
+         sendMessage({
+            name: 'Amigo 2',
+            message: 'Combinado !'
+          })
+      }
    }
 function getMessages(){
   $.get('http://3.80.40.175:3000/messages', (data) => {
