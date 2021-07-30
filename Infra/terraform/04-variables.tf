@@ -15,11 +15,11 @@ variable "SUBNET" {
 }
 
 variable "AWS_ACESS_KEY_ID" {
-    default = "AKIAUMPFTM34BVOJU3FJ" 
+    default = "" 
 }
 
 variable "AWS_SECRET_ACESS_KEY" {
-   default =  "rpKQh+4GHbR++AQwsBHGMqnUO7ACsMY0m8TJ26sT"
+   default =  ""
 } 
 
 variable "AWS_REGION" {
