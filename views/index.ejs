@@ -43,28 +43,28 @@ function addMessages(message){
       <h4> ${message.name} </h4>
       <p>  ${message.message} </p>`)
       
-      if (message.message == 'oi'){
+      if (message.message == 'oi' && message.name == 'Dancairo'){
          sendMessage({
-            name: 'Amigo 2',
+            name: 'Kenneth',
             message: 'Olá tudo bem?'
           })
       }
-      if (message.message == 'estou bem e voce?' && message.name == 'Amigo'){
+      if (message.message == 'estou bem e voce?' && message.name == 'Dancairo'){
          sendMessage({
-            name: 'Amigo 2',
+            name: 'Kenneth',
             message: 'eu também estou'
           })
       }
-      if (message.message == 'Podemos marcar nossa reunião?' && message.name == 'Amigo'){
+      if (message.message == 'Podemos marcar nossa reunião?' && message.name == 'Dancairo'){
          sendMessage({
-            name: 'Amigo 2',
+            name: 'Kenneth',
             message: 'Sim, pode ser hoje as 17 horas?'
           })
       }
 
-      if (message.message == 'Pode sim, perfeito' && message.name == 'Amigo'){
+      if (message.message == 'Pode sim, perfeito' && message.name == 'Dancairo'){
          sendMessage({
-            name: 'Amigo 2',
+            name: 'Kenneth',
             message: 'Combinado !'
           })
       }
