@@ -70,12 +70,12 @@ function addMessages(message){
       }
    }
 function getMessages(){
-  $.get('http://3.80.40.175:3000/messages', (data) => {
+  $.get('https://dancairo-chat.ezops.com.br/messages', (data) => {
    data.forEach(addMessages);
    })
  }
 function sendMessage(message){
-   $.post('http://3.80.40.175:3000/messages', message)
+   $.post('https://dancairo-chat.ezops.com.br/messages', message)
  }
 </script>
 </body>
