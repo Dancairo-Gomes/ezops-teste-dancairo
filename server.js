@@ -16,9 +16,10 @@ var socket = require('socket.io')
 var mongoose = require('mongoose');
 var dbUrl = 'mongodb+srv://Dancairo:dan19091993@cluster0.ahsnl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
-mongoose.connect(dbUrl , (err) => { 
+mongoose.connect(dbUrl , { useNewUrlParser: true, useUnifiedTopology: true }, (err) => { 
     console.log("mongodb connected",err);
  })
+
 
 
 var Message = mongoose.model("Message",{ name : String, message : String})
